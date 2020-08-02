@@ -13,3 +13,14 @@ body {
     padding-top: 50px;
 }
 
+.jumbotron{
+      
+    color: #000;
+    background-image: url(../images/pizza4.jpg);
+    background-size: cover;
+    background-position: top;
+    border-radius: 10px;
+    color:white;
+    font-size: 20px;
+}
+
