@@ -37,3 +37,28 @@ $(document).ready(function() {
     $("#deliveryLocation").show();
   });
 });
+
+ // Pizza Constructor
+ function PizzaOrder(pizzaSize, pizzaCrust, pizzaToppings, pizzaCount) {
+  this.size = pizzaSize;
+  this.crust = pizzaCrust;
+  this.toppings = pizzaToppings; //toppings array
+  this.count = pizzaCount;
+}
+
+PizzaOrder.prototype.getPrice = function() {
+  var sizePrice, crustPrice, toppingsPrice;
+  sizePrice = parseInt(this.size.val());
+  crustPrice = parseInt(this.crust.val());
+
+  toppingsPrice = this.toppings.map(function() {
+    return parseInt($(this).val());
+  });
+  var toppingsTotalPrice = 0;
+  for (var i = 0; i < toppingsPrice.length; i++) {
+    toppingsTotalPrice += toppingsPrice[i];
+  }
+
+  var orderPrice = (sizePrice + crustPrice + toppingsTotalPrice) * this.count;
+  return orderPrice;
+};
