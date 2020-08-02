@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $("form#pizzaMenu").submit(function(event) {
+$(document).ready(function () {
+  $("form#pizzaMenu").submit(function (event) {
     var size, crust, toppings, count;
     size = $("#pizzaSize :selected");
     crust = $("#pizzaCrust :selected");
@@ -13,45 +13,45 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-   // Display checkout button on order placement
-   $("#checkoutBtn").click(function() {
+  // Display checkout button on order placement
+  $("#checkoutBtn").click(function () {
     var delivery = $("#delivery :checked").val();
     var location = $("#deliveryLocation").val()
     var allCharge = parseInt($("#tt-charge").html());
 
     if (delivery === "deliver") {
-      alert(`Thanks for shopping with Downtown Pizzeria.
-      Your total charge is ${allCharge + 300}/=
+      alert(`Thank you so much for choosing Pizzeria, as your online pizza shop.
+      Your total charge is Ksh ${allCharge + 500}/=
       Your delivery is en-route to ${location}`);
-    // } else {
-    //   alert(`Thanks for shopping with Downtown Pizza.
-    //   Your total charge is ${allCharge}`);
+      } else {
+        alert(`Thank you so much for choosing pizzeria, as your online pizza shop.
+        Your total charge is Ksh ${allCharge}`);
     }
   });
 
   // Display delivery location form field
-  $("#pick-up").click(function() {
+  $("#pick-up").click(function () {
     $("#deliveryLocation").hide();
   });
-  $("#deliver").click(function() {
+  $("#deliver").click(function () {
     $("#deliveryLocation").show();
   });
 });
 
- // Pizza Constructor
- function PizzaOrder(pizzaSize, pizzaCrust, pizzaToppings, pizzaCount) {
+// Pizza Constructor
+function PizzaOrder(pizzaSize, pizzaCrust, pizzaToppings, pizzaCount) {
   this.size = pizzaSize;
   this.crust = pizzaCrust;
   this.toppings = pizzaToppings; //toppings array
   this.count = pizzaCount;
 }
 
-PizzaOrder.prototype.getPrice = function() {
+PizzaOrder.prototype.getPrice = function () {
   var sizePrice, crustPrice, toppingsPrice;
   sizePrice = parseInt(this.size.val());
   crustPrice = parseInt(this.crust.val());
 
-  toppingsPrice = this.toppings.map(function() {
+  toppingsPrice = this.toppings.map(function () {
     return parseInt($(this).val());
   });
   var toppingsTotalPrice = 0;
@@ -62,10 +62,10 @@ PizzaOrder.prototype.getPrice = function() {
   var orderPrice = (sizePrice + crustPrice + toppingsTotalPrice) * this.count;
   return orderPrice;
 };
- // Add pizza to cart
- function addToCart(order) {
+// Add pizza to cart
+function addToCart(order) {
   var toppings = order.toppings
-    .map(function() {
+    .map(function () {
       return this.id;
     })
     .get()
