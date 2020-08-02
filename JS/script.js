@@ -28,3 +28,12 @@ $(document).ready(function() {
     //   Your total charge is ${allCharge}`);
     }
   });
+
+  // Display delivery location form field
+  $("#pick-up").click(function() {
+    $("#deliveryLocation").hide();
+  });
+  $("#deliver").click(function() {
+    $("#deliveryLocation").show();
+  });
+});
