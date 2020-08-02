@@ -62,3 +62,23 @@ PizzaOrder.prototype.getPrice = function() {
   var orderPrice = (sizePrice + crustPrice + toppingsTotalPrice) * this.count;
   return orderPrice;
 };
+ // Add pizza to cart
+ function addToCart(order) {
+  var toppings = order.toppings
+    .map(function() {
+      return this.id;
+    })
+    .get()
+    .join();
+  $("#pizzaCart tbody").append(`<tr>
+                                  <td>${order.size.html()}</td>
+                                  <td>${order.crust.html()}</td>
+                                  <td>${toppings}</td>
+                                  <td>${order.getPrice()}</td>
+                                </tr>`);
+
+  var currentTotalCharge = parseInt($("#tt-charge").html());
+  $("#tt-charge").html(currentTotalCharge + order.getPrice());
+  $("#checkoutBtn").show();
+  $("#delivery").show();
+}
