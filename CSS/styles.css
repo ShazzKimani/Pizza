@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/pizza4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: center;
+    text-align: center;  
+    /* background-attachment: fixed; */
+    color: white;
+    
+  }
