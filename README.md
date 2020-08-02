@@ -1,11 +1,12 @@
 # Pizzeria
 ## Author
- By Sharon Kimani
- ## Live Link 
- * https://shazzkimani.netlify.app
+ By Sharon Kimani.
+ 
 ## Description
 This is a web app that allows one to order a pizza of their liking, customize it, get total charges for it and also have it delivered.
 
+## Live Link 
+ * https://shazzkimani.netlify.app
 ## Techologies used
 This application was developed by incorporating the use of:
 - HTML 
@@ -13,9 +14,27 @@ This application was developed by incorporating the use of:
 - BOOTSTRAP
 - JAVASCRIPT
 - J.Query
+
+## Setup Instructions and Installation
+* Clone this repository to a location in your file system.
+* git clone https://shazzkimani.netlify.app
 ## Technical requirements
 - One needs a computer with stable internet access to be able to use the features. 
 - One would then fill in the form as required and order their pizza.
+## Known bugs
+* No known bugs detected.
+## Development
+Want to contribute? Great!
+
+To fix a bug or enhance an existing module, follow these steps:
+
+- Fork the repo
+- Create a new branch (git checkout -b improve-feature)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (git commit -am 'Improve feature')
+- Push to the branch (git push origin improve-feature)
+- Create a Pull Request
 ## Contacts and support
 For more information, corrections or clarification, reach out at sharonkimani01@gmail.com
 ## License
