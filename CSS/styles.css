@@ -5,11 +5,10 @@ body {
     background-position: center;
     text-align: center;  
     /* background-attachment: fixed; */
-    color: white;
-    
+    color: white;    
   }
 
-  .container{
+.container{
     padding-top: 50px;
 }
 
