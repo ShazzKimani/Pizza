@@ -1,8 +1,8 @@
-# Pizzarea
+# Pizzeria
 ## Author
  By Sharon Kimani
  ## Live Link 
-
+ * https://shazzkimani.netlify.app
 ## Description
 This is a web app that allows one to order a pizza of their liking, customize it, get total charges for it and also have it delivered.
 
