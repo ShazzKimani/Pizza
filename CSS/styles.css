@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/pizza4.jpg");
+    background-image: url("../images/crispy1.jpg");
     background-repeat: no-repeat;
     background-size: cover;  
     background-position: center;
@@ -14,10 +14,10 @@ body {
 
 .jumbotron{
       
-    color: #000;
-    background-image: url(../images/pizza4.jpg);
+    color:white;
+    background-image: url(../images/crispy1.jpg);
     background-size: cover;
-    background-position: top;
+    background-position:top;
     border-radius: 10px;
     color:white;
     font-size: 20px;
@@ -28,6 +28,6 @@ body {
 }
 
 .text1{
-    color: black;
+    color: white;
 }
 
